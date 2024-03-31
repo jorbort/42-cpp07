@@ -1,9 +1,9 @@
 NAME = Array
-CFLAG = -Wall -Werror -Wextra -g -std=c++98 ##-fsanitize=address
+CFLAG = -Wall -Werror -Wextra -g -std=c++98 -fsanitize=address
 SRC = main.cpp
 CC = c++
 OBJS = $(SRC:.cpp=.o)
-HEADER = Array.hpp Array.tpp
+HEADER =  Array.hpp
 
 %.o: %.cpp
 	$(CC) -I. $(CFLAG) -c $< -o $@
